@@ -28,6 +28,10 @@ article:hover{
 }
 
 @media (min-width:0px){
+    ul{
+        display:grid;
+        column-gap:20px;
+    }
     div.content_show{
         display:none;
     }
