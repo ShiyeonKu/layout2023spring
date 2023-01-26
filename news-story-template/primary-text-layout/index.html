@@ -30,7 +30,7 @@
           <span v-html="featuredStory.content"></span>
   
           <!-- Story source (linked) -->
-          <a v-bind:href="featuredStory.source.url">{{ featuredStory.source.name }}</a>
+          <a v-bind:href="featuredStory.source.url"> {{ featuredStory.source.name }}</a>
 
         <!-- Debugging info, you can comment this section out when you don't need it. -->
         <pre>The featured story object: {{ featuredStory | json }}</pre>
