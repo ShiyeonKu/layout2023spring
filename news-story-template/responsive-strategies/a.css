@@ -11,17 +11,31 @@ body{
 .other_list{
     font-size: 16px;
 }
+
 ul{
     list-style:none;
+    display:grid;
     padding: 10px;
     row-gap: 40px;
     align-items:start;
 }
+
 li{
     transition: transform .2s;
+    padding-bottom: 20px;
 }
 li:hover{
     transform: scale(1.05);
+}
+
+article{
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top:40px;
+    padding-bottom:40px;
+    border-radius:10px;
+    box-shadow: 5px 5px 10px rgba(61, 84, 66, 0.5);
+    position:relative;
 }
 article:hover{
     box-shadow: 0px 0px 45px rgba(61, 84, 66, 0.80);
@@ -29,7 +43,6 @@ article:hover{
 
 @media (min-width:0px){
     ul{
-        display:grid;
         column-gap:20px;
     }
     div.content_show{
@@ -39,7 +52,6 @@ article:hover{
 
 @media (min-width: 800px){
     ul{
-        display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 30px;
     }
@@ -50,26 +62,12 @@ article:hover{
 
 @media (min-width: 1350px){
     ul{
-        display:grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 30px;
     }
     div.content_show{
         display:block;
     }
-}
-
-li{
-    padding-bottom: 20px;
-}
-article{
-    padding-left: 20px;
-    padding-right:20px;
-    padding-top:40px;
-    padding-bottom:40px;
-    border-radius:10px;
-    box-shadow: 5px 5px 10px rgba(61, 84, 66, 0.5);
-    position:relative;
 }
 
 a.title{
