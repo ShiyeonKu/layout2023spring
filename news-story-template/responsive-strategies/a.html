@@ -43,34 +43,36 @@
   
         <ul class = "other_list">
           <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
+          
           <li v-for="story in stories">
-            <article>
-  
-            <!-- Story title (linked) -->
-            <a class="title" v-bind:href="story.url">{{ story.title }}</a>
+            <a href="story.url">
+            <div class="clickable_story">
             
-            <!-- Story description -->
-            <p>{{ story.description }}</p>
+                <!-- Story title (linked) -->
+                <a class="title" v-bind:href="story.url">{{ story.title }}</a>
             
-            <!-- Story image -->
-            <figure>
-                <img v-bind:src="story.image">
-                <figcaption>             
-                    <!-- Story date -->
-                    <sub>{{ story.date }}</sub>
-                </figcaption>
-            </figure>
+                <!-- Story description -->
+                <p>{{ story.description }}</p>
+            
+                <!-- Story image -->
+                <figure>
+                  <img v-bind:src="story.image">
+                  <figcaption>             
+                      <!-- Story date -->
+                      <sub>{{ story.date }}</sub>
+                  </figcaption>
+                </figure>
 
-            <div class="content_show">          
-                <!-- Story content (truncated)-->
-                <hr>
-                <p class="content" v-html="story.content"></p>
+                <div class="content_show">          
+                  <!-- Story content (truncated)-->
+                  <hr>
+                  <p class="content" v-html="story.content"></p>
+                </div>
+            
+                <!-- Story source (linked) -->
+                <a class = "source" v-bind:href="story.source.url">{{ story.source.name }}</a>
             </div>
-            
-            <!-- Story source (linked) -->
-            <a class = "source" v-bind:href="story.source.url">{{ story.source.name }}</a>
-            
-            </article>
+            </a>
           </li>
         </ul>
   
