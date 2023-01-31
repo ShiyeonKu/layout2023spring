@@ -44,7 +44,8 @@
         <ul class = "other_list">
           <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
           <li v-for="story in stories">
-            <article>
+            <a href="story.url">
+              <div class="clickable_story">
   
             <!-- Story title (linked) -->
             <a class="title" v-bind:href="story.url">{{ story.title }}</a>
@@ -70,8 +71,9 @@
             
             <!-- Story source (linked) -->
             <a class = "source" v-bind:href="story.source.url">{{ story.source.name }}</a>
-            
-            </article>
+          
+            </div>
+            </a>
           </li>
         </ul>
   
