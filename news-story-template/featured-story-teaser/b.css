@@ -1,0 +1,123 @@
+[v-cloak] { display: none; }
+
+body{
+    margin:50px;
+    
+}
+
+.featured_story{
+    display:none;
+}
+.other_list{
+    font-size: 16px;
+}
+ul{
+    list-style:none;
+    display:grid;
+    padding: 10px;
+    row-gap: 40px;
+}
+li{
+    position:relative;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top:40px;
+    border-radius:10px;
+    box-shadow: 5px 5px 10px rgba(61, 84, 66, 0.5);
+    transition: transform .2s;
+    padding-bottom: 20px;
+}
+li:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 45px rgba(61, 84, 66, 0.80);
+}
+
+@media (min-width:0px){
+    ul{
+        column-gap:20px;
+    }
+    li{
+        position:relative;
+        padding-bottom:50px;
+    }
+    div.content_show{
+        display:none;
+    }
+}
+
+@media (min-width: 800px){
+    ul{
+        grid-template-columns: 1fr;
+        column-gap:30px;
+    }
+    div.img_content{
+        display:flex;
+        column-gap: 30px;
+    }
+    div.content_show{
+        display:block;
+    }
+    figure{
+        max-width:1000px;
+    }
+
+}
+
+@media (min-width: 1350px){
+    ul{
+        grid-template-columns: 1fr 1fr;
+        column-gap:30px;
+    }
+    div.content_show{
+        display:block;
+    }
+    figure{
+        max-width:1000px;
+    }
+}
+
+a.title{
+    text-decoration:none;
+    font-size: 24px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:bold;
+    color:darkolivegreen;
+}
+a.title:hover{
+    text-decoration:underline;
+}
+
+a.source{
+    position:absolute;
+    right: 15px;
+    bottom: 15px;
+    color:darkolivegreen;
+}
+
+p{
+    font-style:italic;
+}
+p.content{
+    font-style:normal;
+    margin-bottom:0px;
+}
+
+figure{
+    display:flex;
+    flex-flow:column;
+    margin: 0%;
+}
+img{
+    max-width: 100%;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+figcaption{
+    background-color:darkolivegreen;
+    color:beige;
+    padding-bottom:5px;
+    padding-left:5px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
