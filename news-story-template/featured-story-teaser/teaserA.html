@@ -5,43 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategy A</title>
-    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="teaserA.css">
 </head>
 <body>
     <div id="news-stories-list-template" v-cloak>
 
         <div class="featured_story">
-            <!-- The Featured Story -->
-            <h1>Featured Story</h1>
-  
-          <!-- Story title (linked) -->
-          <a v-bind:href="featuredStory.url">{{ featuredStory.title }}</a>
-          
-          <!-- Story description -->
-          {{ featuredStory.description }}
-  
+
           <!-- Story date -->
-          {{ featuredStory.date }}
-  
+          <p>{{ featuredStory.date }}</p>
+
+          <!-- Story title (linked) -->
+          <a class="featured_title" v-bind:href="featuredStory.url">{{ featuredStory.title }}</a>
+
+          <!-- Story description -->
+          <p class="featured_description">{{ featuredStory.description }}</p>
+
+          <div class="img_container">
+          <figure>
           <!-- Story image -->
           <img v-bind:src="featuredStory.image">
-  
+          </figure>
+          <div class="bottom-right">
+            <!-- The Featured Story -->
+            <h1>Featured Story</h1>
+          </div>
+          </div>
+
           <!-- Story content (truncated) -->
-          <span v-html="featuredStory.content"></span>
+          <p class="featured_content" v-html="featuredStory.content"></p>
   
+          <div class="story_source">
           <!-- Story source (linked) -->
-          <a v-bind:href="featuredStory.source.url"> {{ featuredStory.source.name }}</a>
+          <p>reported by
+          <a v-bind:href="featuredStory.source.url"> {{ featuredStory.source.name }}</a></p>
+          </div>
 
-        <!-- Debugging info, you can comment this section out when you don't need it. -->
+        <!-- Debugging info, you can comment this section out when you don't need it.
         <pre>The featured story object: {{ featuredStory | json }}</pre>
-  
-            <!-- Stories List -->
-            <h1>Other Stories</h1>
-
+          -->
         </div>
-
+      
+        
+        <!-- Stories List -->
+        <hr>
+        <h1>Other Stories</h1>
+        
   
         <ul class = "other_list">
+          
+
           <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
           
           <li v-for="story in stories">
