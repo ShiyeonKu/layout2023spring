@@ -50,6 +50,7 @@ ul{
     display:grid;
     padding: 10px;
     row-gap: 40px;
+    height: 900px;
 }
 li{
     position:relative;
