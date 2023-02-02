@@ -1,11 +1,11 @@
 {
     "entrypoints": [
       {
-        "name": "Strategy A",
+        "name": "Teaser A",
         "file": "teaserA.html"
       },
       {
-        "name": "Strategy B",
+        "name": "Teaser B",
         "file": "teaserB.html"
       }
     ]
