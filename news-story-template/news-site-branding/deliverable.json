@@ -1,0 +1,12 @@
+{
+    "entrypoints": [
+      {
+        "name": "Option A",
+        "file": "OptionA.png"
+      },
+      {
+        "name": "Option B",
+        "file": "OptionB.png"
+      }
+    ]
+  }
