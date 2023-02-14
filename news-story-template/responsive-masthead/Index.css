@@ -2,7 +2,10 @@
 
 body{
 }
-
+.spacing{
+    margin:50px;
+    text-align:center;
+}
 .img_container{
     margin:0px;
     height:100%;
