@@ -8,9 +8,25 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  
-    <div id="news-stories-list-template" v-cloak>
 
+  <div class="menu" id="hashLink">
+    <div class="reverse_logo">
+      <img class="reverse_logo_img" src="reverse_logo.svg" alt="reverse_logo_img"/>
+    </div>
+    <div class="menu_option">
+      <hr>
+      <h3>Home</h3>
+      <hr>
+      <h3>About</h3>
+      <hr>
+      <h3>Login</h3>
+      <hr>
+    </div>
+  </div>
+  
+
+
+    <div id="news-stories-list-template" v-cloak>
 
         <div class="featured_story">
           <div class="img_container">
@@ -18,7 +34,7 @@
             <img v-bind:src="featuredStory.image">
             <!--logo image-->
             <div class="logo">
-              <img class = "logo_img" src="logo.svg" alt="logo_img">
+              <a href="#hashLink"><img class = "logo_img" src="logo.svg" alt="logo_img"/></a>
             </div>
             <div class="featured_date">
               <!-- Story date -->
@@ -59,7 +75,8 @@
           <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
           
           <li v-for="story in stories">
-            <div class="clickable_story">
+
+            
                 <!-- Story date -->
                 <p class="date">{{ story.date }}</p>
             
@@ -85,7 +102,6 @@
                 <a class = "source" v-bind:href="story.source.url">{{ story.source.name }}</a>
                 </p>
                 </div>
-            </div>
           </li>
         </ul>
   
