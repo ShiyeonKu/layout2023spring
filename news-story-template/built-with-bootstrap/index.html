@@ -26,69 +26,95 @@
 
         </div>
         -->
-        <div class = "bg-image">
-            <img v-bind:src="featuredStory.image" alt="..." class="w-100">
-            <div class="mask" style="background-color: rgba(0, 0, 0, 0.5)"></div>
-        </div>
+            <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="logo.svg" alt="logo">
+                        WildLife
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Monthly Update</a>
+                              </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Profile
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Setting</a></li>
+                                <li><a class="dropdown-item" href="#">Sign In</a></li>
+                                <li>
+                                  <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Create Account</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-secondary" type="Submit">Search</button>
+                        </form>
+                        </div>
+                      </div>
 
-        <div class="card text-light">
-            <div class="mask" style="background-color: rgba(0,0,0,0.5)">
-                <img class="card-img" v-bind:src="featuredStory.image" alt="...">
+                </div>
+            </nav>
+
+
+        <div class="card" style="max-width: 100%;">
+            <div class="row g-3">
+                <div class="col-xs-4 col-md-7 col-xl-md-8">
+                    <img v-bind:src="featuredStory.image" class="card-img-top" alt="...">
+                </div>
+                <div class="col-md-5">
+                    <div class="card-body">
+                        <p class="card-text">{{ featuredStory.date }}</p>
+                        <h2 class="card-title"><a v-bind:href="featuredStory.url">{{ featuredStory.title }}</a></h2>
+                        <p class="card-text" v-html="featuredStory.content" ></p>
+                        <p class="card-text"><a v-bind:href="featuredStory.source.url">{{ featuredStory.source.name }}</a></p>
+
+                    </div>
+                </div>
             </div>
-            <div class="card-img-overlay">
-                <p>
-                    <!-- Story date -->
-                    {{ featuredStory.date }}
-                </p>
-                <h2>
-                <!-- Story title (linked) -->
-                <a v-bind:href="featuredStory.url">{{ featuredStory.title }}</a>
-                </h2>
-                <p v-html="featuredStory.content" class="card-text"></p>
-                <p class="card-text">
-                    <a v-bind:href="featuredStory.source.url">{{ featuredStory.source.name }}</a>
-                </p>
-                
-                
-            </div>
         </div>
-
-
-  
-        <!-- Debugging info, you can comment this section out when you don't need it.
-        <pre>The featured story object: {{ featuredStory | json }}</pre>
-        -->
   
         <hr>
         <!-- Stories List -->
-        <h1>Other Stories</h1>
 
         <div class="container">
             <div class="row g-3">
                 <div v-for="story in stories" class="col col-12 col-md-6 col-lg-4">
-                    <div  class="card text-bg-light mb-3 shadow">
+                    <div  class="card text-bg-light card border-info mb-3 mb-3 shadow">
                         <!-- Story image -->
                         <img v-bind:src="story.image" class="card-img-top" alt="...">
                         <div class="card-body">
                             <!-- Story title (linked) -->
-                            <h4><a v-bind:href="story.url" class="card-title">{{ story.title }}</a></h5>
+                            <h4><a v-bind:href="story.url" class="card-title">{{ story.title }}</a></h4>
                             <!-- Story content (truncated) -->
                             <p v-html="story.content" class="card-text"></p>
                             <!-- Story source (linked) -->
-                            <a v-bind:href="story.source.url" class="btn btn-primary">{{ story.source.name }}</a>
+                            <a v-bind:href="story.source.url" class="btn btn-link">{{ story.source.name }}</a>
                         </div>
                     </div>
                 </div>
                     
             </div>
         </div>
-
-
-
-  
-        <!-- Debugging info, you can comment this section out when you don't need it. 
-        <pre>The stories array: {{ stories | json }}</pre>
-        -->
 
       </div>
   

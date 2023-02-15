@@ -36,11 +36,9 @@
             <div class="logo">
               <a href="#hashLink"><img class = "logo_img" src="logo.svg" alt="logo_img"/></a>
             </div>
-            <div class="featured_date">
+            <div class="text">
               <!-- Story date -->
               <p>{{ featuredStory.date }}</p>
-            </div>
-            <div class="text">
               <!-- Story title (linked) -->
               <a class="featured_title" v-bind:href="featuredStory.url">{{ featuredStory.title }}</a>
               <!-- Story description -->
@@ -52,7 +50,7 @@
               <!-- Story source (linked) -->
               <p>reported by
               <a class="source" v-bind:href="featuredStory.source.url"> {{ featuredStory.source.name }}</a></p>
-              </div>
+            </div>
 
           </div>
 
