@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildLife</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="fold_menu" id="hashLink">
+    <div class="reverse_logo">
+      <img class="reverse_logo_img" src="reverse_logo.svg" alt="reverse_logo_img"/>
+    </div>
+    <div class="fold_menu_option">
+      <hr>
+      <h3>Home</h3>
+      <hr>
+      <h3>About</h3>
+      <hr>
+      <h3>Login</h3>
+      <hr>
+    </div>
+  </div>
+  
+
+
+
+    <div id="news-stories-list-template" v-cloak>
+
+        <div class="featured_story">
+          <div class="img_container">
+            <!-- Story image -->
+            <img class="featured_img" v-bind:src="featuredStory.image">
+              <!--menu-->
+              <div class="menu">
+              <a class="menu_item">Home</a>
+              <a class="menu_item">About</a>
+              <a class="menu_item">Login / Sign In</a>
+            </div>
+            <!--logo image-->
+            <div class="logo">
+              <a href="#hashLink"><img class = "logo_img" src="logo.svg" alt="logo_img"/></a>
+            </div>
+
+            <div class="text">
+              <!-- Story date -->
+              <p>{{ featuredStory.date }}</p>
+              <!-- Story title (linked) -->
+              <a class="featured_title" v-bind:href="featuredStory.url">{{ featuredStory.title }}</a>
+              <!-- Story description -->
+              <p class="featured_description">{{ featuredStory.description }}</p>
+              <!-- Story content (truncated) -->
+              <p class="featured_content" v-html="featuredStory.content"></p>
+            </div>
+            <div class="story_source">
+              <!-- Story source (linked) -->
+              <p>reported by
+              <a class="source" v-bind:href="featuredStory.source.url"> {{ featuredStory.source.name }}</a></p>
+            </div>
+          </div>
+  
+
+
+        <!-- Debugging info, you can comment this section out when you don't need it.
+        <pre>The featured story object: {{ featuredStory | json }}</pre>
+          -->
+        </div>
+      
+        
+        <!-- Stories List -->
+        <hr>
+        <div class="spacing">
+        </div>
+        <ul class = "other_list">
+          
+
+          <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
+          
+          <li v-for="story in stories">
+
+            
+                <!-- Story date -->
+                <p class="date">{{ story.date }}</p>
+            
+                <!-- Story title (linked) -->
+                <a class="title" v-bind:href="story.url">{{ story.title }}</a>
+            
+                <!-- Story description -->
+                <p>{{ story.description }}</p>
+            
+                <!-- Story image -->
+                <div class="img_gradient">
+                  <img class="small_img" v-bind:src="story.image">
+                </div>
+
+                <div class="content_show">          
+                  <!-- Story content (truncated)-->
+                  <p class="content" v-html="story.content"></p>
+                </div>
+            
+                <!-- Story source (linked) -->
+                <div class="source_div">
+                <p>featured by
+                <a class = "source" v-bind:href="story.source.url">{{ story.source.name }}</a>
+                </p>
+                </div>
+          </li>
+        </ul>
+  
+        <!-- Debugging info, you can comment this section out when you don't need it.
+        <pre>The stories array: {{ stories | json }}</pre>
+        -->
+
+      <!--footer-->
+      <div class="footer">
+        <a class="footer_link" href="https://gnews.io/">@2023 GNews API. All Rights Reserved</a>
+          <br><br>
+          <a class="footer_link">Terms of Use</a>
+          |
+          <a class="footer_link">Privacy Policy</a>
+          <br>
+          <a class="footer_link">FaceBook</a>
+          |
+          <a class="footer_link">Instagram</a>
+          |
+          <a class="footer_link">Twitter</a>
+
+      </div>
+      
+      </div>
+  
+      <!-- These scripts load the Vue library, and the actual story content. -->
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="https://abesiemsen.github.io/layout2023spring-resources/projects/news-story-template/data.js"></script>
+</body>
+</html>
