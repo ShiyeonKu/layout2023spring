@@ -46,7 +46,7 @@
 
             <div class="text">
               <!-- Story date -->
-              <p>{{ featuredStory.date }}</p>
+              <p class="featured_date">{{ featuredStory.date }}</p>
               <!-- Story title (linked) -->
               <a class="featured_title" v-bind:href="featuredStory.url">{{ featuredStory.title }}</a>
               <!-- Story description -->
@@ -56,7 +56,7 @@
             </div>
             <div class="story_source">
               <!-- Story source (linked) -->
-              <p>reported by
+              <p class="featured_date">reported by
               <a class="source" v-bind:href="featuredStory.source.url"> {{ featuredStory.source.name }}</a></p>
             </div>
           </div>
