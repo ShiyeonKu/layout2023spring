@@ -9,25 +9,13 @@
 </head>
 <body>
 
-  <div class="fold_menu" id="hashLink">
-    <div class="reverse_logo">
-      <img class="reverse_logo_img" src="reverse_logo.svg" alt="reverse_logo_img"/>
-    </div>
-    <div class="fold_menu_option">
-      <hr>
-      <h3>Home</h3>
-      <hr>
-      <h3>About</h3>
-      <hr>
-      <h3>Login</h3>
-      <hr>
-    </div>
-  </div>
+
   
 
 
 
     <div id="news-stories-list-template" v-cloak>
+
 
         <div class="featured_story">
           <div class="img_container">
@@ -39,11 +27,15 @@
               <a class="menu_item">About</a>
               <a class="menu_item">Login / Sign In</a>
             </div>
-            <!--logo image-->
-            <div class="logo">
-              <a href="#hashLink"><img class = "logo_img" src="logo.svg" alt="logo_img"/></a>
-            </div>
-
+          <!--logo menu-->
+          <div class="fold_menu">
+            <a href="#home" class="active" onclick="myFunction()"><img class = "logo_img" src="logo.svg" alt="logo_img"/></a>
+          <div id="myLinks">
+            <a class="ind_link" href="#home">Home</a>
+            <a class="ind_link" href="#about">About</a>
+            <a class="ind_link" href="#login">Login / Sign Up</a>
+          </div>
+        </div>
             <div class="text">
               <!-- Story date -->
               <p class="featured_date">{{ featuredStory.date }}</p>
@@ -131,6 +123,17 @@
       
       </div>
   
+      <!--script for fold menu-->
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
       <!-- These scripts load the Vue library, and the actual story content. -->
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
       <script src="https://abesiemsen.github.io/layout2023spring-resources/projects/news-story-template/data.js"></script>
