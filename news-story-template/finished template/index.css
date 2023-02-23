@@ -309,6 +309,7 @@ a.footer_link:hover{
     }
     .fold_menu{
         position:absolute;
+        width: auto;
         top: -29px;
         left: 0px;
     }
@@ -366,7 +367,9 @@ a.footer_link:hover{
     div.content_show{
         display:block;
     }
-
+    .fold_menu{
+        width: auto;
+    }
     .img_container{
         width:1350px;
         height:800px;
