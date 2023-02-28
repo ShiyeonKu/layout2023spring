@@ -273,6 +273,10 @@ a.footer_link:hover{
         font-size:30px;
         color:rgb(254, 249, 220);
     }
+    a.featured_source{
+        color:rgb(191,189,167);
+        text-decoration:none;
+    }
     a.source{
         color:rgb(191,189,167);
         text-decoration:none;
@@ -333,6 +337,13 @@ a.footer_link:hover{
     }
     .text{
         position:absolute;
+    }
+    a.source{
+        color:rgb(172,70,28);
+    }
+    a.featured_source{
+        color:rgb(191,189,167);
+        text-decoration:none;
     }
     a.featured_title{
         font-size:35px;
@@ -396,6 +407,13 @@ a.footer_link:hover{
     }
     .text{
         position:absolute;
+    }
+    a.source{
+        color:rgb(172,70,28);
+    }
+    a.featured_source{
+        color:rgb(191,189,167);
+        text-decoration:none;
     }
     a.featured_title{
         font-size:45px;
