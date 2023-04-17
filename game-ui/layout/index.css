@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+}
+
+.container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:5%;
+}
+
+.main{
+    width:1200px;
+    position:absolute;
+}
+
+img{
+    width:1200px;
+}
+
+.background {
+    position:absolute;
+}
+.clickable_character{
+    position:absolute;
+}
+
+.clickable_item{
+    position:absolute;
+}
+.dialog{
+    position:absolute;
+}
+.item_slot{
+    position:absolute;
+}
+.item_slot_button{
+    position:absolute;
+}
