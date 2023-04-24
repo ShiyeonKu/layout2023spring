@@ -1,0 +1,191 @@
+@font-face{
+    font-family: customFont;
+    src:url(Pangolin/Pangolin-Regular.ttf);
+}
+
+.body{
+    display: block;
+}
+
+.background{
+    position:fixed;
+    width:80em;
+}
+.c_character{
+    position:fixed;
+    right: 13.7em;
+    top:13.5em;
+    width:16em;
+}
+.c_character:hover{
+    transition-duration: 1s;
+    transform:scale(1.1);
+}
+.c_item{
+    position:fixed;
+    top:18em;
+    right:34em;
+    width:13em;
+}
+.c_item:hover{
+    transition-duration: 1s;
+    transform:scale(1.2);
+}
+.dialog{
+    position:fixed;
+    bottom:2.2em;
+}
+.dialog_script{
+    font-family:customFont;
+    font-size:2em;
+    position:absolute;
+    bottom:1em;
+    left:3em;
+    color:dimgray;
+}
+.c_popup{
+    position:fixed;
+    visibility:hidden;
+}
+.c_popup img{
+    width:100%;
+}
+.c_popup_content{
+    position:fixed;
+    left:300px;
+    top:150px;
+    font-family:customFont;
+    font-size: 20px;
+    width:700px;
+    visibility:hidden;
+}
+.c_popup_img{
+    position:fixed;
+    width:20em;
+    top:10em;
+    left:12em;
+}
+.c_popup_content img{
+    width:100%;
+}
+.c_popup_content p{
+    position:absolute;
+    width:400px;
+    top:3em;
+    left:15em;
+}
+
+.i_popup{
+    position:fixed;
+    visibility:hidden;
+}
+.i_popup img{
+    width:100%;
+}
+.i_popup_content{
+    position:fixed;
+    left:300px;
+    top:150px;
+    font-family:customFont;
+    font-size: 20px;
+    width:700px;
+    visibility:hidden;
+}
+.i_popup_img{
+    position:fixed;
+    width:16em;
+    top:13em;
+    left:14em;
+}
+.i_popup_content img{
+    width:100%;
+}
+.i_popup_content p{
+    position:absolute;
+    width:400px;
+    top:4em;
+    left:15em;
+}
+
+
+.dialog_option {
+    position:absolute;
+    margin:30px;
+    width:400px;
+    top:11em;
+    left:15em;
+}
+.i_dialog_option{
+    position:absolute;
+    margin:30px;
+    width:400px;
+    top:14em;
+    left:13.5em;
+}
+.i_dialog_option button{
+    font-family:customFont;
+    padding:10px;
+    font-size:30px;
+    color:crimson;
+    border:none;
+    background-color:rgba(0,0,0,0);
+}
+.i_dialog_option button:hover{
+    text-decoration:underline;
+}
+.dialog_option button{
+    font-family:customFont;
+    padding:10px;
+    font-size:20px;
+    border:none;
+    color:crimson;
+    background-color:rgba(0, 0, 0, 0);
+}
+.dialog_option button:hover{
+    text-decoration:underline;
+}
+
+.close{
+    position:fixed;
+    top:5.2em;
+    font-family:customFont;
+    font-size:30px;
+}
+.close:hover{
+    cursor:pointer;
+    transform:scale(1.1);
+}
+
+.item{
+    position:fixed;
+    right:1.5em;
+    width:9em;
+}
+.item_slot {
+    position:fixed;
+    right:1.5em;
+    bottom:21em;
+    width:10em;
+}
+
+.background img{
+    width:100%;
+}
+.c_character img{
+    width:100%;
+}
+.c_item img{
+    width:100%;
+}
+.dialog img{
+    width:100%;
+}
+.popup img{
+    width:100%;
+}
+.item img{
+    width:100%;
+}
+.item_slot img{
+    width:100%;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Interaction</title>
+</head>
+<body>
+    <div class="all">
+        <div class="background">
+            <img src="background.jpg" alt="background">
+        </div>
+        <div class="c_character">
+            <img src="Clickable_character.png" alt="character" id="character">
+        </div>
+        <div class="c_item">
+            <img src="Clickable_item.png" alt="item" id="item">
+        </div>
+        <div class="dialog">
+            <img src="dialog_box.png" alt="dialog">
+            <div class="dialog_script">
+                <p>I need to figure out what's going on</p>
+            </div>
+        </div>
+        <div class="c_popup">
+            <img src="popup-box.png" alt="popup-box" id="c_popup">
+            <div class="c_popup_content" id = "c_content">
+                <span class ="close" id="c_close"> X </span>
+                <br>
+                <div class="c_popup_img">
+                    <img src="character_detail.png" alt="character detail">
+                </div>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                <div class="dialog_option">
+                    <button type="button">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"</button>
+                    <button type="button">"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam?"</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="i_popup">
+            <img src="popup-box.png" alt="popup-box" id="i_popup">
+            <div class="i_popup_content" id = "i_content">
+                <span class ="close" id="i_close"> X </span>
+                <br>
+                <div class="i_popup_img">
+                    <img src="Clickable_item.png" alt="item detail">
+                </div>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                <div class="i_dialog_option">
+                    <button type="button">"Keep the item"</button>
+                    <button type="button">"Forget it"</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="item_slot.png" alt="item slot" id="item_slot">
+        </div>
+        <div class="item_slot">
+            <img src="item_slot_close.png" alt="item slot closing button" id="item_slot_button">
+        </div>
+        <script>
+            close_flag = false;
+        </script>
+    </div>
+    
+
+</body>
+</html>
