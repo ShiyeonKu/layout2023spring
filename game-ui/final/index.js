@@ -1,3 +1,9 @@
+/*
+.c_character:hover{
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 3%, rgba(121,9,22,1) 18%, rgba(0,212,255,0) 75%);
+}
+*/
 window.onload = function(){
 
     //listen if user clicked item slot close button, if so, move the item slot 
